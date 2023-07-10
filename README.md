@@ -1,4 +1,4 @@
-Convert Anyt Text to Slug
+Convert Any Text to Slug
 =======
 
 A boring little wesite to convert any text to a slug.
