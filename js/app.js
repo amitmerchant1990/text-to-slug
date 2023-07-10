@@ -1,37 +1,15 @@
-$(document).ready(function () {
-    $('#rawText').on('keyup', function () {
-        let sluggedText = textToSlug($(this).val());
+const input = document.querySelector("#rawText");
+const output = document.querySelector("#sluggedText");
+const copyToClipboard = document.querySelector("#copyToClipboard");
 
-        $('#sluggedText').val(sluggedText);
-    });
+input.addEventListener("input", () => (output.value = slugify(input.value)));
 
-    $('#copyToClipboard').on('click', function () {
-        copyToClipboard($('#sluggedText').val());
-    });
-
-    const slugify = (str) => str.toLowerCase()
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/(^-|-$)+/g, '');
-
-    function textToSlug(text) {
-        return slugify(text);
-    }
-
-    function copyToClipboard(text) {
-        if (text.length === 0)
-            return;
-
-        $('#copyToClipboard').html('Copied to Clipboard!');
-
-        let textArea = document.createElement('textarea');
-        textArea.value = text;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('Copy');
-        textArea.remove();
-
-        setTimeout(function () {
-            $('#copyToClipboard').html('Copy to Clipboard');
-        }, 2000);
-    }
+copyToClipboard.addEventListener("click", () => {
+    navigator.clipboard.writeText(output.value);
 });
+
+const slugify = (str) =>
+  str
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
