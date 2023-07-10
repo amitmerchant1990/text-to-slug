@@ -1,13 +1,6 @@
 <!DOCTYPE html>
-<!--
-your-first-commit-ever
-(c) 2023 Amit Merchant
-license: GNU LESSER GENERAL PUBLIC LICENSE
-https://text-to-slug.pages.dev/
--->
 <html>
-
-  <head>
+<head>
     <title>Convert Text to Slug</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
@@ -21,52 +14,54 @@ https://text-to-slug.pages.dev/
     <meta property="og:url" content="https://text-to-slug.pages.dev/">
     <meta property="og:title" content="Convert Text to Slug">
     <meta property="og:description" content="Easily Convert Any Text to its Slug Counuterpart">
-    <!-- <meta property="og:image" content="/cdn/banner.png"> -->
+    <meta property="og:image" content="https://text-to-slug.pages.dev/assets/cover.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://text-to-slug.pages.dev/">
     <meta property="twitter:title" content="Convert Text to Slug">
     <meta property="twitter:description" content="Easily Convert Any Text to its Slug Counuterpart">
-    <!-- <meta property="twitter:image" content="https://www.amitmerchant.com/cdn/banner.png"> -->
+    <meta property="twitter:image" content="https://text-to-slug.pages.dev/assets/cover.png">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/cover.css" rel="stylesheet">
     <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/app.js" type="text/javascript"></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand hero-title">Text to Slug</h3>
-            </div>
-          </div>
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand hero-title">Text to Slug</h3>
+                    </div>
+                </div>
 
-          <div class="inner cover">
-            <h1 class="cover-heading"></h1>
-            <p class="lead">
-              <input class="form-control" id="rawText" name="rawText" type="text"
-                placeholder="Paste in your text here..." autofocus>
-            </p>
-            <p>
-                <button id="texttoslug" class="btn btn-primary">Convert</button>
-            </p>
-            <p>
-                <a href="javascript:void(0);" id="copyToClipboard">Copy to Clipboard</a>
-            </p>
-          </div>
+                <div class="inner cover">
+                    <h1 class="cover-heading"></h1>
+                    <p class="lead">
+                        <input class="form-control" id="rawText" name="rawText" type="text"
+                            placeholder="Paste in your text here..." autofocus>
+                    </p>
+                    <p class="lead">
+                        <input class="form-control" id="sluggedText" name="sluggedText" type="text"
+                            placeholder="The slug will appear here" disabled>
+                    </p>
+                    <p>
+                        <button id="copyToClipboard" class="btn btn-primary">Copy to Clipboard</button>
+                    </p>
+                </div>
 
-          <div class="mastfoot">
-            <div class="inner">
-              <p>Made with ❤️ by <a href="https://www.amitmerchant.com">Amit Merchant</a>  •  <a href="https://github.com/amitmerchant1990/text-to-slug">Source</a></p>
+                <div class="mastfoot">
+                    <div class="inner">
+                        <p>Made with ❤️ by <a href="https://www.amitmerchant.com">Amit Merchant</a> • <a
+                                href="https://github.com/amitmerchant1990/text-to-slug">Source</a></p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </body>
+</body>
+
 </html>

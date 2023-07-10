@@ -1,10 +1,12 @@
 $(document).ready(function () {
-    $('#texttoslug').on('click', function () {
-        textToSlug($('#rawText').val());
+    $('#rawText').on('keyup', function () {
+        let sluggedText = textToSlug($(this).val());
+
+        $('#sluggedText').val(sluggedText);
     });
 
     $('#copyToClipboard').on('click', function () {
-        copyToClipboard($('#rawText').val());
+        copyToClipboard($('#sluggedText').val());
     });
 
     const slugify = (str) => str.toLowerCase()
@@ -12,15 +14,14 @@ $(document).ready(function () {
         .replace(/(^-|-$)+/g, '');
 
     function textToSlug(text) {
-        let slug = slugify(text)
-        $('#rawText').val(slug)
+        return slugify(text);
     }
 
     function copyToClipboard(text) {
         if (text.length === 0)
             return;
 
-        $('#copyToClipboard').html('Copied to Clipboard');
+        $('#copyToClipboard').html('Copied to Clipboard!');
 
         let textArea = document.createElement('textarea');
         textArea.value = text;
