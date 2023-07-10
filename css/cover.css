@@ -83,6 +83,15 @@ body {
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
+.btn-primary {
+  color: #fff;
+  background-color: #3c80bb;
+  border-color: #3c80bb;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
 /* Padding for spacing */
 .inner {
   padding: 15px;
