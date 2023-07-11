@@ -22,8 +22,13 @@ copyToClipboard.addEventListener("click", () => {
     }, 1000);
 });
 
-const slugify = (str) =>
-    str
+const slugify = (text) =>
+    replaceAccentedCharacters(text)
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/(^-|-$)+/g, "");
+
+// https://stackoverflow.com/a/70288180/1485183        
+const replaceAccentedCharacters = text =>
+    text.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
