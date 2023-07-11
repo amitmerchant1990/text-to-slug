@@ -10,12 +10,7 @@ copyToClipboard.addEventListener("click", () => {
 
     copyToClipboard.innerHTML = 'Copied to Clipboard!';
 
-    let textArea = document.createElement('textarea');
-    textArea.value = output.value;
-    document.body.appendChild(textArea);
-    textArea.select();
-    document.execCommand('Copy');
-    textArea.remove();
+    navigator.clipboard.writeText(output.value);
 
     setTimeout(function () {
         copyToClipboard.innerHTML = 'Copy to Clipboard';
