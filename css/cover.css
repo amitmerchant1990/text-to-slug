@@ -84,6 +84,11 @@ body {
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #3979b1;
@@ -91,6 +96,21 @@ body {
   border-radius: 10px;
   font-weight: bold;
   font-size: 18px;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #ff5c93;
+  border-color: #ff5c93;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  background-color: #ff6397;
+  color: #fff !important;
+  text-decoration: none !important;
 }
 
 #separator {

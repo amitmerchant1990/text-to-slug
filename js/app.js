@@ -1,11 +1,18 @@
 const input = document.querySelector('#rawText');
 const output = document.querySelector('#sluggedText');
 const separator = document.querySelector('#separator');
+const clearInput = document.querySelector('#clearInput');
 const copyToClipboard = document.querySelector('#copyToClipboard');
 
 input.addEventListener('input', () => (output.value = slugify(input.value)));
 
 separator.addEventListener('input', () => (output.value = slugify(input.value)));
+
+clearInput.addEventListener('click', () => {
+    input.value = '';
+    output.value = '';
+    input.focus();
+});
 
 copyToClipboard.addEventListener('click', () => {
     if (output.value.length === 0)
