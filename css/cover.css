@@ -93,11 +93,14 @@ body {
   font-size: 18px;
 }
 
+#separator {
+  background-color: #dbdbdb;
+}
+
 /* Padding for spacing */
 .inner {
   padding: 15px;
 }
-
 
 /*
  * Header

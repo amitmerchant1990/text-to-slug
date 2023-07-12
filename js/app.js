@@ -1,8 +1,11 @@
 const input = document.querySelector('#rawText');
 const output = document.querySelector('#sluggedText');
+const separator = document.querySelector('#separator');
 const copyToClipboard = document.querySelector('#copyToClipboard');
 
 input.addEventListener('input', () => (output.value = slugify(input.value)));
+
+separator.addEventListener('input', () => (output.value = slugify(input.value)));
 
 copyToClipboard.addEventListener('click', () => {
     if (output.value.length === 0)
@@ -23,7 +26,7 @@ copyToClipboard.addEventListener('click', () => {
 const slugify = (text) =>
     replaceAccentedCharacters(text)
         .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/[^a-z0-9]+/g, separator.value)
         .replace(/(^-|-$)+/g, '');
 
 // https://stackoverflow.com/a/70288180/1485183        
