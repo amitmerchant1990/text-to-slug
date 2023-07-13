@@ -6,7 +6,10 @@ const copyToClipboard = document.querySelector('#copyToClipboard');
 
 input.addEventListener('input', () => (output.value = slugify(input.value)));
 
-separator.addEventListener('input', () => (output.value = slugify(input.value)));
+separator.addEventListener('input', () => {
+    output.value = slugify(input.value)
+    input.focus();
+});
 
 clearInput.addEventListener('click', () => {
     input.value = '';
@@ -27,11 +30,12 @@ copyToClipboard.addEventListener('click', () => {
     setTimeout(function () {
         copyToClipboard.innerHTML = 'Copy to Clipboard';
         copyToClipboard.disabled = false;
-    }, 1000);
+    }, 400);
 });
 
 const slugify = (text) =>
     replaceAccentedCharacters(text)
+        .trim()
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, separator.value)
         .replace(/(^-|-$)+/g, '');
