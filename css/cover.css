@@ -126,9 +126,10 @@ body {
  * Header
  */
 .masthead-brand {
-  margin-top: 10px;
+  margin-top: 4px;
   margin-bottom: 10px;
   font-weight: bold;
+  font-size: 18px;
 }
 
 .masthead-nav > li {
